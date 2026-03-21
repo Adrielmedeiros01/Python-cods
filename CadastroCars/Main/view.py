@@ -2,11 +2,13 @@ import tkinter as tk
 from tkinter import ttk
 
 class CarroView:
+
     def __init__(self, root):
         self.root = root
-        self.root.title("🚗 Sistema MVC")
+        self.root.title("CADASTRANDO CARROS")
         self.root.geometry("600x450")
         self.root.configure(bg="#1e1e2f")
+        self.root.resizable(width=False, height=False) 
 
         self.frame = tk.Frame(root, background="#1e1e2f")
         self.frame.pack(pady=10)
@@ -24,21 +26,18 @@ class CarroView:
         self.entry_modelo.grid(row=2, column=1)
 
         self.btn_add = ttk.Button(self.frame, text="Adicionar")
-        self.btn_add.grid(row=15, column=0, pady=5)
+        self.btn_add.grid(row=3, column=0, pady=5)
 
         self.btn_update = ttk.Button(self.frame, text="Atualizar")
-        self.btn_update.grid(row=15, column=1)
+        self.btn_update.grid(row=3, column=1)
 
         self.btn_delete = ttk.Button(self.frame, text="Deletar")
-        self.btn_delete.grid(row=15, column=2)
-
+        self.btn_delete.grid(row=3, column=2)
 
 
 
         style = ttk.Style()
         style.theme_use("default")
-
-
         # Estilo da tabela
         style.configure("Treeview",
                         background="#2a2a40",
